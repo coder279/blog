@@ -4,5 +4,5 @@ go 1.14
 
 require (
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-playground/universal-translator v0.17.0 // indirect
+	github.com/spf13/viper v1.7.1
 )
