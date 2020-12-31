@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"myblog/global"
+	"myblog/internal/model"
 	"myblog/internal/routers"
 	setting2 "myblog/pkg/setting"
 	"net/http"
@@ -36,6 +37,15 @@ func SetUpSetting() error {
 	}
 	global.ServerSetting.ReadTimeOut *= time.Second
 	global.ServerSetting.WriteTimeOut *= time.Second
+	return nil
+}
+
+func setupDBEngine() error {
+	var err error
+	global.DBEngine,err = model.NewDBEngine(global.DataBaseSetting)
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
