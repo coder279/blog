@@ -4,7 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 	"myblog/pkg/logger"
 	"myblog/pkg/setting"
-	"gopkg.in/natefinch/lumberjack.v2"
 )
 
 var (
