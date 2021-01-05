@@ -1,5 +1,11 @@
 package model
 
+import "myblog/pkg/app"
+
+type ArticleSwagger struct {
+	List []*Article
+	Pager *app.Pager
+}
 //文章结构体--article.go
 type Article struct {
 	*Model
