@@ -153,6 +153,11 @@ func (l *Logger) Fatal (v ...interface{}){
 func (l *Logger) Fatalf (format string, v ...interface{}){
 	l.WithLevel(LevelFatal).Output(fmt.Sprintf(format,v...))
 }
+func (l *Logger) Error(ctx context.Context, v ...interface{}) {
+	l.WithLevel(LevelError).Output(fmt.Sprint(v...))
+}
 
-
+func (l *Logger) Errorf(ctx context.Context, format string, v ...interface{}) {
+	l.WithLevel(LevelError).Output(fmt.Sprintf(format, v...))
+}
 
