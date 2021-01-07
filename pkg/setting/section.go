@@ -14,6 +14,10 @@ type AppSettings struct {
 	LogSavePath string
 	LogFileName string
 	LogFileExt string
+	UploadSavePath string
+	UploadServerUrl string
+	UploadImageMaxSize int
+	UploadImageAllowExts []string
 }
 type DatabaseSettings struct {
 	DBType       string
